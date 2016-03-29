@@ -1,3 +1,13 @@
-<h2 id="title">Welcome to Ember</h2>
+<header>
+  <nav>
+    <ul>
+      <li>{{#link-to 'index'}}<img id="logo" src="http://pngimg.com/upload/orange_PNG805.png">{{/link-to}}</li>
+      {{#link-to 'about'}}<li class="nav-item">About</li>{{/link-to}}
+      {{#link-to 'contact'}}<li class="nav-item">Contact</li>{{/link-to}}
+    </ul>
+  </nav>
+</header>
 
-{{outlet}}
+<body>
+  {{outlet}}
+</body>

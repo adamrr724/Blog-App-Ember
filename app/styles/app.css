@@ -1,0 +1,27 @@
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+li {
+  list-style: none;
+  padding-right: 2em;
+}
+
+li:first-child {
+  margin-right: auto;
+}
+#logo {
+  height: 50px;
+}
+
+header {
+  background: lightblue;
+  width: 100%;
+}
+
+.nav-item {
+  padding-top: 15px;
+  font-weight: bolder;
+  color: white;
+}
