@@ -3,7 +3,7 @@
   {{new-post addNewPost2="addNewPost3"}}
 
 {{#each model as |post|}}
-  {{edit-post post=post savepost2="savePost3"}}
+  {{edit-post post=post savePost2="savePost3"}}
   <button class="btn btn-danger"{{action 'delete' post}} type="button" name="button">Delete</button>
 {{/each}}
 </div>

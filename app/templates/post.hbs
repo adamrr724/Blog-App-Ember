@@ -1,10 +1,12 @@
 <div class="container animated fadeIn">
-  <h2>{{model.title}}</h2>
-  <h6>By {{model.author}} on {{model.date}}</h6>
-  <div class="text__area">
-    <img src="{{model.image}}" alt="" />
-    <p>{{model.body}}</p>
+  <div class="title__area">
+    <h2>{{model.title}}</h2>
+    <h6>By {{model.author}} on {{model.date}}</h6>
   </div>
+  <div class="text__area">
+    <img class="post__image" src="{{model.image}}" alt="" />
+  </div>
+    <p class="post__body">{{model.body}}</p>
 </div>
 
 

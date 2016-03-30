@@ -17,12 +17,13 @@ export default Ember.Route.extend({
         this.transitionTo('admin');
       }
     },
-    savePost3(post, params) {
-      Object.keys(params).forEach(function(key) {
-        if(params[key] !== undefined) {
-          post.set(key, params[key]);
-        }
-      });
+    savePost3(post) {
+      console.log("3");
+      // Object.keys(params).forEach(function(key) {
+      //   if(params[key] !== undefined) {
+      //     post.set(key, params[key]);
+      //   }
+      // });
       post.save();
       this.transitionTo('admin');
     }
