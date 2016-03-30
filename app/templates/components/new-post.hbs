@@ -1,1 +1,6 @@
+{{#if addNewPost}}
+  <p>Form to add new Post shown here</p>
+{{else}}
+  <button {{ action 'showNewPostForm' }}class="btn btn-lg" type="button" name="button">Add Post</button>
+{{/if}}
 {{yield}}
