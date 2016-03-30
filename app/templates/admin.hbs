@@ -5,6 +5,7 @@
 
 {{#each model as |post|}}
   {{edit-post post=post}}
+  <button class="btn btn-danger"{{action 'delete' post}} type="button" name="button">Delete</button>
 {{/each}}
 
 {{outlet}}
