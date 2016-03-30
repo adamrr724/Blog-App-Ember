@@ -1,11 +1,11 @@
 <div class="container">
   <h1>Update</h1>
   {{new-post addNewPost2="addNewPost3"}}
-</div>
 
 {{#each model as |post|}}
   {{edit-post post=post}}
   <button class="btn btn-danger"{{action 'delete' post}} type="button" name="button">Delete</button>
 {{/each}}
+</div>
 
 {{outlet}}

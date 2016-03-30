@@ -1,8 +1,11 @@
-<div class="container">
+
+{{#if editPost}}
+  <p>
+    show a form
+  </p>
+{{else}}
   <h3>{{post.title}}</h3>
-  <button class="btn btn-primary"{{action 'update' post}} type="button" name="button">Update</button>
-
-</div>
-
+  <button class="btn btn-primary"{{action 'editPost'}}>Update</button>
+{{/if}}
 
 {{yield}}
