@@ -15,6 +15,7 @@ export default Ember.Component.extend({
         image: this.get('image')
       };
       this.sendAction('addNewPost2', params);
+      this.set('addNewPost', false);
     }
   }
 });
