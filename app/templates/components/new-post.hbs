@@ -15,9 +15,9 @@
     <label for="image">Image URL</label>
     {{input value=image id="image" placeholder=post.image}}
 
-    <button {{ action 'addNewPost' }}class="btn btn-lg btn-success" type="button" name="button">Save Post</button>
+    <button {{action 'addNewPost'}}class="btn btn-lg btn-success" type="button" name="button">Save Post</button>
   </form>
 {{else}}
-  <button {{ action 'showNewPostForm' }}class="btn btn-lg" type="button" name="button">Add Post</button>
+  <button {{action 'showNewPostForm'}}class="btn btn-lg" type="button" name="button">Add Post</button>
 {{/if}}
 {{yield}}
