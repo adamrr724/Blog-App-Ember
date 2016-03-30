@@ -1,5 +1,22 @@
 {{#if addNewPost}}
-  <p>Form to add new Post shown here</p>
+  <form>
+    <label for="title">Title</label>
+    {{input value=title id="title" placeholder=post.title}}
+
+    <label for="author">Author</label>
+    {{input value=author id="author" placeholder=post.author}}
+
+    <label for="date">Date</label>
+    {{input type="date" value=date id="date" placeholder=post.date}}
+
+    <label for="body">Body</label>
+    {{textarea rows="10" cols="100" value=body id="body" placeholder=post.body}}
+
+    <label for="image">Image URL</label>
+    {{input value=image id="image" placeholder=post.image}}
+
+    <button {{ action 'addNewPost' }}class="btn btn-lg btn-success" type="button" name="button">Save Post</button>
+  </form>
 {{else}}
   <button {{ action 'showNewPostForm' }}class="btn btn-lg" type="button" name="button">Add Post</button>
 {{/if}}

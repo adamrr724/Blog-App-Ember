@@ -1,14 +1,12 @@
 <div class="container">
   <h1>Homepage</h1>
 
-
-
   {{#each model as |post|}}
     {{posts-tile post=post}}
   {{/each}}
 
 </div>
-<!-- To put it briefly, the post on the left of the = refers to the variable name used within the component and the post on the right refers to the model object we're assigning this variable to. When passing objects into a component the name on the left of = always refers to the variable name used within the component. The name on the right refers to the object we're assigning to that variable name. Left side is variable from component called 'posts=tile' and right is variable used in index.hbs template -->
+<!-- To put it briefly, the post on the left of the = refers to the variable name used within the component and the post on the right refers to the model object we're assigning this variable to. When passing objects into a component the name on the left of = always refers to the variable name used within the component. The name on the right refers to the object we're assigning to that variable name. Left side is variable from component called 'posts-tile' and right is variable used in index.hbs template -->
 
 
 {{outlet}}
