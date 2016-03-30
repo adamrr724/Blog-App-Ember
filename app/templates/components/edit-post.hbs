@@ -1,8 +1,23 @@
 
 {{#if editPost}}
-  <p>
-    show a form
-  </p>
+<form>
+  <label for="title">Title</label>
+  {{input value=post.title id="updateTitle" placeholder=post.title}}
+
+  <label for="author">Author</label>
+  {{input value=post.author id="updateAuthor" placeholder=post.author}}
+
+  <label for="date">Date</label>
+  {{input type="date" value=post.date id="updateDate" placeholder=post.date}}
+
+  <label for="body">Body</label>
+  {{textarea rows="10" cols="100" value=post.body id="updateBody" placeholder=post.body}}
+
+  <label for="image">Image URL</label>
+  {{input value=post.image id="updateImage" placeholder=post.image}}
+
+  <button {{action 'savePost'}}class="btn btn-lg btn-success" type="button" name="button">Save Post</button>
+</form>
 {{else}}
   <h3>{{post.title}}</h3>
   <button class="btn btn-primary"{{action 'editPost'}}>Update</button>

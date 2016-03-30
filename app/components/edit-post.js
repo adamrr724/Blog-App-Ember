@@ -6,7 +6,8 @@ export default Ember.Component.extend({
   actions: {
     editPost() {
       this.set('editPost', true);
-    }
+    },
+    save
   }
 
 
