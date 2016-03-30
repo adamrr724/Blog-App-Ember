@@ -1,13 +1,18 @@
 <div class="container animated fadeIn">
-  <div class="row">
+  <h1 class='admin__title'>Admin Page</h1>
+  <hr>
+  <div class="row form__inputs">
     <div class="col-md-6">
-      <h1>Update</h1>
+      <h4>New Post</h4>
+      <hr>
       {{new-post addNewPost2="addNewPost3"}}
     </div>
     <div class="col-md-6">
+      <h4>Edit Existing Posts</h4>
+      <hr>
       {{#each model as |post|}}
         {{edit-post post=post savePost2="savePost3"}}
-        <button class="btn btn-danger"{{action 'delete' post}} type="button" name="button">Delete</button>
+        <button class="btn btn-danger delete__button"{{action 'delete' post}} type="button" name="button">Delete</button>
       {{/each}}
     </div>
   </div>

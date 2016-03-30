@@ -34,10 +34,22 @@ header {
 .tiles img {
   height: 250px;
 }
-/**** Add Post Form *******/
+/**** Admin Page *******/
+
+.admin__title {
+  text-align: center;
+}
+.form__inputs {
+  display: flex;
+  text-align: center;
+}
 .new__post {
   display: flex;
   flex-direction: column;
+}
+
+.delete__button {
+  margin-top: 5px;
 }
 
 

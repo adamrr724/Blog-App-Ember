@@ -14,6 +14,7 @@
   {{input value=post.image id="updateImage" placeholder=post.image}}
 
   <button {{action 'savePost' post}}class="btn btn-lg btn-success" type="button" name="button">Save Post</button>
+  <button {{action 'hidePost'}}class="btn btn-lg btn-warning" type="button" name="button">Hide</button>
 </form>
 {{else}}
   <h3>{{post.title}}</h3>
