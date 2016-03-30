@@ -16,8 +16,8 @@ li:first-child {
 }
 #about {
 display: flex;
-justify-content: center;
-vertical-align: middle;
+flex-direction: column;
+align-items: center;
 }
 
 header {
@@ -33,8 +33,13 @@ header {
 
 .tiles img {
   height: 250px;
-  width:350px;
 }
+/**** Add Post Form *******/
+.new__post {
+  display: flex;
+  flex-direction: column;
+}
+
 
 /**** Individual Post *****/
 
