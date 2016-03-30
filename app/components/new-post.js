@@ -19,7 +19,6 @@ export default Ember.Component.extend({
           body: this.get('body'),
           image: this.get('image')
         };
-        console.log(this.get('date')),
         this.sendAction('addNewPost2', params);
         this.set('addNewPost', false);
       }
