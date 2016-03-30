@@ -30,3 +30,8 @@ header {
   font-weight: bolder;
   color: white;
 }
+
+.tiles img {
+  height: 250px;
+  width:350px;
+}

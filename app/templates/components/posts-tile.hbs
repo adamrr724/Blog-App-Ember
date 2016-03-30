@@ -1,11 +1,13 @@
-<div class="post__container">
-  <h1>{{post.title}}</h1>
-  <h4>By {{post.author}} on {{post.date}}</h4>
-  <div class="text__area">
-    <img src="{{post.image}}" alt="image" />
-    <p>{{post.body}}</p>
+{{#link-to 'post' post.id}}
+<div class="post__container tiles col-md-4">
+  <div class="row">
+    <h3>{{post.title}}</h3>
+    <h6>{{post.date}}</h6>
+    <div class="text__area">
+      <img src="{{post.image}}" alt="image" />
+    </div>
   </div>
 </div>
-<br>
+{{/link-to}}
 
 {{yield}}
