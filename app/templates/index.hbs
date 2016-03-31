@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Homepage</h1>
 
-  {{#each model as |post|}}
+  {{#each model.post as |post|}}
     {{posts-tile post=post}}
   {{/each}}
 

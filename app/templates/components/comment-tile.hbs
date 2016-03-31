@@ -1,5 +1,9 @@
 <p>
-  comments go here
+  {{#each post.comments as |comment|}}
+    <p>{{comment.name}}</p>
+    <p>{{comment.rating}}</p>
+    <p>{{comment.body}}</p>
+  {{/each}}
 </p>
 
 {{yield}}
