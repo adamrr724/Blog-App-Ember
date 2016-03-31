@@ -4,6 +4,7 @@ export default Ember.Component.extend({
 
   actions: {
     addNewComment() {
+      console.log("addNewComment Step 1");
       var params = {
         name: this.get('name'),
         rating: this.get('rating'),
