@@ -1,1 +1,15 @@
+
+<form class="new__comment">
+  <label for="name">Name</label>
+  {{input value=name id="name"}}
+
+  <label for="rating">Rating</label>
+  {{input value=rating id="rating"}}
+
+  <label for="body">Body</label>
+  {{textarea rows="10" cols="60" value=body id="body"}}
+
+  <br>
+  <button {{action 'addNewComment'}}class="btn btn-lg btn-success" type="button" name="button">Add Comment</button>
+</form>
 {{yield}}
