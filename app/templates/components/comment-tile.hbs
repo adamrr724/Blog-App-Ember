@@ -1,9 +1,18 @@
-<p>
-  {{#each post.comments as |comment|}}
-    <p>{{comment.name}}</p>
-    <p>{{comment.rating}}</p>
-    <p>{{comment.body}}</p>
+
+  {{#each post.comments as |comment|}}<!--post is from the previous page, and it refers to the specifc post we are looking at. post.comments grabs the comments for that post and refers to them as 'comment' so we can list the name, rating, and the body for each comment.-->
+  <div class="each_comment">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>{{comment.name}}</h4>
+        <p>Rating: {{comment.rating}}/5</p>
+
+      </div>
+      <div class="col-md-8">
+        <p>{{comment.body}}</p>
+      </div>
+    </div>
+  </div>
   {{/each}}
-</p>
+
 
 {{yield}}
