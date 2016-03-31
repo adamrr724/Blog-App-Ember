@@ -7,13 +7,20 @@ export default Ember.Route.extend({
   actions: {
     addNewComment3(params) {
       console.log("addNewComment step 3")
-      var newComment = this.store.createRecord('comment', params);
-      var post = params.post;
-      post.get('comments').addObject(newComment);
-      newComment.save().then(function(){
-        return post.save();
+      //when we save a new child record(Comment) to a parent record(Post), we must save both sides of the relationship. In the addNewComment3() action, we first identify the new post object and the comment it will belong to. Then we add the new post to the posts attribute of our current comment using the .addObject(); method. Next we save the 
+      var newComment = this.store.createRecord('comment', params);//Create a new comment with the information from our parameters, save it to the database, and call it "newComment".
+      var post = params.post;//Refer to the post in those parameters as "post".
+      post.get('comments').addObject(newComment);//Retrieve the list of comments located in "post", and add "newComment" to that list.
+      newComment.save().then(function(){//Save "newComment", so it remembers what post it belongs in.
+        return post.save();//Wait until "newRental" has finished saving, then save "post'" too, so it remembers it contains "newRental".
       });
-      this.transitionTo('post', params.post);
+      this.transitionTo('post', params.post);//Afterwards, take us to the page displaying details for "post".
     }
   }
+
+
+
+
+
+
 });

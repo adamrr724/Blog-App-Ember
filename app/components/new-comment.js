@@ -12,6 +12,9 @@ export default Ember.Component.extend({
         post: this.get('post')
       };
       this.sendAction('addNewComment2', params);
+      this.set('name', '');
+      this.set('rating', '');
+      this.set('body', '');
     }
   }
 });
